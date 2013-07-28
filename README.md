@@ -4,16 +4,19 @@ carrierwave-docsplit is a thin wrapper around docsplit that knows how to talk to
 
 # Usage
 
-``gem install carrierwave-docsplit``
+1. Install it:
+```ruby
+gem install carrierwave-docsplit
+```
 
 
-1. Require the file and drop it into your module.
+2. Then Require the file and drop it into your module.
 
   ```ruby 
   extend CarrierWave::DocsplitIntegration 
   ```
 
-2. Hook in the integration.
+3. Hook in the integration.
 
   ```ruby
     extract_images :to => :thumbs, :sizes => { :large => "300x", :medium => "500x" }
