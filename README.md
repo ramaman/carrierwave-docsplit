@@ -4,6 +4,9 @@ carrierwave-docsplit is a thin wrapper around docsplit that knows how to talk to
 
 # Usage
 
+``gem install carrierwave-docsplit``
+
+
 1. Require the file and drop it into your module.
 
   ```ruby 
