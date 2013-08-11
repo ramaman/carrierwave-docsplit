@@ -51,7 +51,7 @@ module CarrierWave
 
         define_method :output_path do
           return nil if self.file.nil?
-          File.join self.store_dir, self.file.basename
+          File.expand_path(File.join self.store_dir, self.file.basename)
         end
 
         # Latch our extraction method into the processing queue.
@@ -94,7 +94,7 @@ module CarrierWave
           # Only as single size supplied
           else
             options.delete :to
-            size = options.values.first
+            size = options[:sizes].values.first
             reduced[size] = dirs_or_files
           end
 
